@@ -2,7 +2,7 @@ Welcome to ACR computer facilities documentation!
 =================================================
 
 .. toctree::
-    :caption: MINERVA:
+    :caption: MINERVA
     
     System description <system_description_minerva.rst>
     How to obtain an account <account_minerva.rst> 
@@ -14,7 +14,7 @@ Welcome to ACR computer facilities documentation!
     Policies <policies_minerva.rst>
 
 .. toctree::
-    :caption: HYPATIA:
+    :caption: HYPATIA
     
     System description <system_description_hyp.rst>
     The Bilby Farm <bilby_farm.rst>
