@@ -1,0 +1,334 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>First steps on Minerva &mdash; ACR computer facilities 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Basic information" href="basic_info_minerva.html" />
+    <link rel="prev" title="Minerva accounts" href="account_minerva.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ACR computer facilities
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Minerva</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="system_description_minerva.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_minerva.html">How to obtain an account</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#logging-in">Logging in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#slurm-basics">Slurm Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#interactive-sessions">Interactive sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_info_minerva.html">Basic information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#backup-and-archiving">Backup and archiving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter_minerva.html">Jupyter on Minerva</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#install-a-python-virtual-environment-once">Install a python virtual environment (once)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#prepare-ssh-on-your-laptop-desktop-once">Prepare ssh on your laptop/desktop (once)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Archive simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#using-screen">Using Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#compressing-the-data">Compressing the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#archiving-the-data">Archiving the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#listing-archived-files">Listing archived files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#deleting-files-from-the-archive">Deleting files from the archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#additional-information">Additional information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips_minerva.html">Useful tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#quota">Quota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#others">Others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#installing-lalsimulation">Installing LALSimulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="policies_minerva.html">Policies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#definitions">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#overall-decision-making">Overall decision making</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#access">Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#communication-with-users">Communication with users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#maintenance">Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#job-queues">Job queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#backup-restore-archiving">Backup/Restore/Archiving</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Hypatia</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system_description_hyp.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bilby_farm.html">The Bilby Farm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ethimology.html">Hypa--who??</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ACR computer facilities</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>First steps on Minerva</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/first_step_minerva.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="first-steps-on-minerva">
+<h1>First steps on Minerva<a class="headerlink" href="#first-steps-on-minerva" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="logging-in">
+<h2>Logging in<a class="headerlink" href="#logging-in" title="Permalink to this headline">¶</a></h2>
+<p>Minerva can be reached via ssh to one of two login nodes, which are known by DNS as <strong>minerva01.aei.mpg.de</strong> and <strong>minerva02.aei.mpg.de</strong>. Internally, their names are <strong>login01</strong> and <strong>login02</strong>.</p>
+<ul class="simple">
+<li>Learn how to type “minerva” without mixing the letters.</li>
+<li>Find the private counterpart of the submitted public key.</li>
+<li>Setup a couple of entries in your <strong>.ssh/config</strong> file, to make typing easier, and use the correct key.</li>
+</ul>
+<p>Once logged in, you can access the other login node, and the compute nodes (<strong>node[001-594]</strong>) by passwordless ssh - a special keypair without passphrase has been created and installed for you. <strong>Do not use this key outside of Minerva</strong>.</p>
+</div>
+<div class="section" id="slurm-basics">
+<h2>Slurm Basics<a class="headerlink" href="#slurm-basics" title="Permalink to this headline">¶</a></h2>
+<p>See <a class="reference external" href="http://slurm.schedmd.com/rosetta.pdf">Slurm’s Rosetta Stone</a></p>
+<p>Here’s a script file stolen from CV:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1">#SBATCH -J imb-03</span>
+<span class="c1">#SBATCH -N 412</span>
+<span class="c1">#SBATCH --ntasks-per-node 16</span>
+<span class="c1">#SBATCH -t 20</span>
+<span class="c1">#SBATCH -m cyclic:cyclic</span>
+<span class="c1">#SBATCH -D /home/cvsupport/dmitry/benchmarks/imb/03</span>
+<span class="c1">#SBATCH -o %N.%j.%a.out</span>
+<span class="c1">#SBATCH -e %N.%j.%a.err</span>
+
+<span class="nb">echo</span> <span class="nv">$SLURM_JOB_NODELIST</span>
+
+module purge
+module load intel2016.3/mpi/64/5.1.3
+<span class="nb">export</span> <span class="nv">I_MPI_DEBUG</span><span class="o">=</span><span class="m">5</span>
+<span class="nb">export</span> <span class="nv">I_MPI_FABRICS</span><span class="o">=</span>shm:tmi
+<span class="nb">export</span> <span class="nv">I_MPI_FALLBACK</span><span class="o">=</span>no
+<span class="c1">#export I_MPI_PIN=yes</span>
+<span class="c1">#export I_MPI_PIN_PROCESSOR_LIST=8</span>
+
+mpirun -genvall -n <span class="k">$((</span><span class="nv">$SLURM_JOB_NUM_NODES</span><span class="o">*</span><span class="nv">$SLURM_NTASKS_PER_NODE</span><span class="k">))</span> -rr ../IMB-MPI1.intel2016.3 -multi <span class="m">1</span> PingPing
+</pre></div>
+</div>
+<p>Someone willing to comment, and explain the details?</p>
+</div>
+<div class="section" id="interactive-sessions">
+<h2>Interactive sessions<a class="headerlink" href="#interactive-sessions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><cite>salloc -p devel</cite> will submit a job to the selected partition</li>
+<li>if there are free resources (and you’re allowed to use them!), this starts a new shell on the login node and assigns the requested resources</li>
+<li>you may check using <cite>env | grep SLURM</cite></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span>stefgru@login01 ~<span class="o">]</span>$ env <span class="p">|</span> grep SLURM
+<span class="nv">SLURM_NODELIST</span><span class="o">=</span>node579
+<span class="nv">SLURM_JOB_NAME</span><span class="o">=</span>bash
+<span class="nv">SLURM_NODE_ALIASES</span><span class="o">=(</span>null<span class="o">)</span>
+<span class="nv">SLURM_NNODES</span><span class="o">=</span><span class="m">1</span>
+<span class="nv">SLURM_JOBID</span><span class="o">=</span><span class="m">39809</span>
+<span class="nv">SLURM_TASKS_PER_NODE</span><span class="o">=</span><span class="m">16</span>
+<span class="nv">SLURM_JOB_ID</span><span class="o">=</span><span class="m">39809</span>
+<span class="nv">SLURM_SUBMIT_DIR</span><span class="o">=</span>/home/stefgru
+<span class="nv">SLURM_JOB_NODELIST</span><span class="o">=</span>node579
+<span class="nv">SLURM_CLUSTER_NAME</span><span class="o">=</span>minerva
+<span class="nv">SLURM_JOB_CPUS_PER_NODE</span><span class="o">=</span><span class="m">16</span>
+<span class="nv">SLURM_SUBMIT_HOST</span><span class="o">=</span>login01.cluster
+<span class="nv">SLURM_JOB_PARTITION</span><span class="o">=</span>devel
+<span class="nv">SLURM_JOB_NUM_NODES</span><span class="o">=</span><span class="m">1</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li>you’re still on te login node, <cite>srun</cite> will use the allocated node(s) (recommendation: start screen to have access to the node(s) in parallel)</li>
+<li><cite>exit</cite> will close the session, and return the allocated node(s) to the pool</li>
+</ul>
+<p>It is recommended to use IntelMPI (IMPI) with Slurm (<em>that’s what PIK people say</em>). Slurm and IMPI will do the correct binding for you, with OpenMPI you may see strange effects.</p>
+<p>(to be extended)</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="basic_info_minerva.html" class="btn btn-neutral float-right" title="Basic information" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="account_minerva.html" class="btn btn-neutral float-left" title="Minerva accounts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Luca Prudenzi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Useful tips for using Minerva &mdash; ACR computer facilities 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Minerva Policies" href="policies_minerva.html" />
+    <link rel="prev" title="Archiving Simulation Data" href="simulation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ACR computer facilities
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Minerva</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="system_description_minerva.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_minerva.html">How to obtain an account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first_step_minerva.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#logging-in">Logging in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#slurm-basics">Slurm Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#interactive-sessions">Interactive sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_info_minerva.html">Basic information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#backup-and-archiving">Backup and archiving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter_minerva.html">Jupyter on Minerva</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#install-a-python-virtual-environment-once">Install a python virtual environment (once)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#prepare-ssh-on-your-laptop-desktop-once">Prepare ssh on your laptop/desktop (once)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Archive simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#using-screen">Using Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#compressing-the-data">Compressing the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#archiving-the-data">Archiving the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#listing-archived-files">Listing archived files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#deleting-files-from-the-archive">Deleting files from the archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#additional-information">Additional information</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Useful tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quota">Quota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#others">Others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing-lalsimulation">Installing LALSimulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="policies_minerva.html">Policies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#definitions">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#overall-decision-making">Overall decision making</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#access">Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#communication-with-users">Communication with users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#maintenance">Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#job-queues">Job queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#backup-restore-archiving">Backup/Restore/Archiving</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Hypatia</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system_description_hyp.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bilby_farm.html">The Bilby Farm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ethimology.html">Hypa--who??</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ACR computer facilities</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Useful tips for using Minerva</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tips_minerva.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="useful-tips-for-using-minerva">
+<h1>Useful tips for using Minerva<a class="headerlink" href="#useful-tips-for-using-minerva" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="quota">
+<h2>Quota<a class="headerlink" href="#quota" title="Permalink to this headline">¶</a></h2>
+<p>To find your current quota:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>beegfs-ctl --getquota --uid <span class="k">$(</span>id -u<span class="k">)</span> --mount<span class="o">=</span>/home
+beegfs-ctl --getquota --uid <span class="k">$(</span>id -u<span class="k">)</span> --mount<span class="o">=</span>/work
+</pre></div>
+</div>
+</div>
+<div class="section" id="others">
+<h2>Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+<p>(From Ian’s collection of useful commands. TODO: tidy these up)</p>
+<p>Using ethernet:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">I_MPI_FABRICS</span><span class="o">=</span>shm:tcp
+<span class="nb">export</span> <span class="nv">I_MPI_TCP_NETMASK</span><span class="o">=</span>enp7s0
+</pre></div>
+</div>
+<p>Idle loaded nodes</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo -p container -t idle -o <span class="s2">&quot;%n %O&quot;</span> -h<span class="p">|</span>sort -k <span class="m">2</span> -n<span class="p">|</span>awk <span class="s1">&#39;$2 &gt; 0.5 {print}&#39;</span>
+</pre></div>
+</div>
+<p>Rogue processes</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> n in <span class="k">$(</span>sinfo -p container -t idle -o %n -h<span class="k">)</span><span class="p">;</span>
+    <span class="k">do</span>
+    <span class="nb">printf</span> <span class="s2">&quot;%s\t%s\n&quot;</span> <span class="nv">$n</span> <span class="k">$(</span>ssh -n <span class="nv">$n</span> ps -e -o <span class="nv">comm</span><span class="o">=</span> <span class="p">|</span>grep -v <span class="s1">&#39;supervisord\|slurmd\|rsyslogd\|sshd\|rsyslogd\|ps\|munged\|nslcd&#39;</span><span class="k">)</span><span class="p">;</span>
+    <span class="k">done</span>
+
+<span class="k">for</span> n in <span class="k">$(</span>sinfo -p container -t drain,idle -o %n -h<span class="k">)</span><span class="p">;</span>
+    <span class="k">do</span>
+    <span class="nb">printf</span> <span class="s2">&quot;%s\t%s\n&quot;</span> <span class="nv">$n</span> <span class="k">$(</span>ssh -n <span class="nv">$n</span> ps -e -o <span class="nv">comm</span><span class="o">=</span> <span class="p">|</span>grep -v <span class="s1">&#39;supervisord\|slurmd\|rsyslogd\|sshd\|rsyslogd\|ps\|munged\|nslcd&#39;</span><span class="k">)</span><span class="p">;</span>
+    <span class="k">done</span>
+</pre></div>
+</div>
+<p>Active processes on each node</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="nb">read</span> node<span class="p">;</span> <span class="k">do</span> <span class="nb">echo</span> <span class="nv">$node</span><span class="p">;</span> ssh <span class="nv">$node</span> top -b -n <span class="m">1</span> -i -d <span class="m">10</span> &lt;/dev/null<span class="p">|</span>tail -n +8<span class="p">;</span> <span class="k">done</span> &lt;machines.txt
+</pre></div>
+</div>
+<p>Job results</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sacct -S <span class="m">2016</span>-07-19 -u ian -o jobid,end,alloccpus,jobname%20,state<span class="p">|</span>grep -v batch<span class="p">|</span>sort -k <span class="m">2</span>
+</pre></div>
+</div>
+<p>Reason nodes are in drain</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sinfo -o <span class="s2">&quot;%P %.5a %.10l %.6D %.6t %N %E&quot;</span>
+
+sinfo -p normal -t drain,down -o <span class="s2">&quot;%20H  %.40E: %N&quot;</span> <span class="p">|</span> sort -r
+<span class="o">(</span>with timestamps<span class="o">)</span>
+</pre></div>
+</div>
+<p>Nodes used by users</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue -a<span class="p">|</span>awk <span class="s1">&#39;$5 == &quot;R&quot; {user = $4; nodes[user] += $7} END {for (u in nodes) {print u,nodes[u]}}&#39;</span>
+</pre></div>
+</div>
+<p>Nodes in job c[109,135-141]</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> node in c109 c135 c136 c137 c138 c139 c140 c141<span class="p">;</span>
+    <span class="k">do</span>
+    <span class="nb">echo</span> <span class="nv">$node</span><span class="p">;</span> ssh <span class="nv">$node</span> top -b -n <span class="m">1</span> -i -d <span class="m">10</span> &lt;/dev/null<span class="p">|</span>tail -n +8<span class="p">;</span>
+    <span class="k">done</span>
+</pre></div>
+</div>
+<p>Node list of a job</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>squeue -j <span class="m">37411</span> -o %N -h
+</pre></div>
+</div>
+<p>Interactive job</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>srun -N <span class="m">1</span> --pty bash
+</pre></div>
+</div>
+</div>
+<div class="section" id="installing-lalsimulation">
+<h2>Installing LALSimulation<a class="headerlink" href="#installing-lalsimulation" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone git@git.ligo.org:lscsoft/lalsuite.git
+<span class="nb">cd</span> lalsuite
+module load gsl/gcc/2.4
+<span class="nb">export</span> <span class="nv">LIBRARY_PATH</span><span class="o">=</span>/home/sossokine/sw/lib
+<span class="nb">export</span> <span class="nv">CPATH</span><span class="o">=</span>/home/sossokine/sw/include
+<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PWD</span>/lalsimulation/python:<span class="nv">$PWD</span>/lal/python/lal:<span class="nv">$PYTHONPATH</span>
+./00boot
+./configure --prefix ~/software/lalsuite --enable-all-lal<span class="o">=</span>no --enable-lalsimulation<span class="o">=</span>yes
+nice make -j <span class="m">8</span>
+make install
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="policies_minerva.html" class="btn btn-neutral float-right" title="Minerva Policies" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="simulation.html" class="btn btn-neutral float-left" title="Archiving Simulation Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Luca Prudenzi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
