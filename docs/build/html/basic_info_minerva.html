@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Basic information &mdash; ACR computer facilities 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Running Jupyter on Minerva" href="jupyter_minerva.html" />
+    <link rel="prev" title="First steps on Minerva" href="first_step_minerva.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ACR computer facilities
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Minerva</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="system_description_minerva.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_minerva.html">How to obtain an account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first_step_minerva.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#logging-in">Logging in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#slurm-basics">Slurm Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#interactive-sessions">Interactive sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#backup-and-archiving">Backup and archiving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter_minerva.html">Jupyter on Minerva</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#install-a-python-virtual-environment-once">Install a python virtual environment (once)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#prepare-ssh-on-your-laptop-desktop-once">Prepare ssh on your laptop/desktop (once)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="simulation.html">Archive simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#using-screen">Using Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#compressing-the-data">Compressing the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#archiving-the-data">Archiving the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#listing-archived-files">Listing archived files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#deleting-files-from-the-archive">Deleting files from the archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simulation.html#additional-information">Additional information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips_minerva.html">Useful tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#quota">Quota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#others">Others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#installing-lalsimulation">Installing LALSimulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="policies_minerva.html">Policies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#definitions">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#overall-decision-making">Overall decision making</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#access">Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#communication-with-users">Communication with users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#maintenance">Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#job-queues">Job queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#backup-restore-archiving">Backup/Restore/Archiving</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Hypatia</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system_description_hyp.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bilby_farm.html">The Bilby Farm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ethimology.html">Hypa--who??</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ACR computer facilities</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Basic information</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/basic_info_minerva.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-information">
+<span id="basic-info"></span><h1>Basic information<a class="headerlink" href="#basic-information" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="queues">
+<h2>Queues<a class="headerlink" href="#queues" title="Permalink to this headline">¶</a></h2>
+<p>The cluster has the following queues:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">Queue</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">devel</th>
+<td><div class="first last line-block">
+<div class="line">Accessible by all users. Used for interactive and debugging use,</div>
+<div class="line">short duration only. Initially 16 separate nodes.</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><th class="stub">urgent</th>
+<td><div class="first last line-block">
+<div class="line">NR users may submit to this queue if they feel their job is more urgent</div>
+<div class="line">than some other NR jobs. They should be prepared to justify (if asked)</div>
+<div class="line">on the mailing list, or to the Director, why the jobs are urgent.</div>
+<div class="line">Non-NR users should ask on the mailing list first if there are objections</div>
+<div class="line">to running in this queue, and say how much they expect to use and for</div>
+<div class="line">how long. If consensus cannot be reached, the Director decides.</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><th class="stub">nr</th>
+<td>Only for NR users</td>
+</tr>
+<tr class="row-odd"><th class="stub">normal</th>
+<td>Accessible by all users</td>
+</tr>
+<tr class="row-even"><th class="stub">fillin</th>
+<td><div class="first last line-block">
+<div class="line">Accessible by all users. Can run longer jobs but they may be</div>
+<div class="line">preempted (killed) by jobs in higher priority queues. See Preemption.</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Additional information:</p>
+<blockquote>
+<div><ul class="simple">
+<li>There is no maximum walltime for jobs in <strong>fillin</strong>.</li>
+<li>The maximum walltime of a job in <strong>devel</strong> is 8 hours.</li>
+<li>The maximum walltime of a single job is 24 hours in all other queues.</li>
+<li>The order of priority of queues is devel &gt; urgent &gt; nr &gt; normal &gt; fillin. A job in a lower priority queue will not be started if it would delay the start of a job in a higher priority queue.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="disk-quotas">
+<h2>Disk quotas<a class="headerlink" href="#disk-quotas" title="Permalink to this headline">¶</a></h2>
+<p>Minerva provides three separate filesystems. Initial disk quotas are:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head stub">FS</th>
+<th class="head">Total size</th>
+<th class="head">Disk quota</th>
+<th class="head">Inode <strong>(*)</strong> file limit</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><th class="stub">/home</th>
+<td>45 TB</td>
+<td>10 GB</td>
+<td>1 Million</td>
+</tr>
+<tr class="row-odd"><th class="stub">/work</th>
+<td>90 TB</td>
+<td>100 GB</td>
+<td>4 Million</td>
+</tr>
+<tr class="row-even"><th class="stub">/scratch</th>
+<td>320 TB</td>
+<td>None (**)</td>
+<td>None (**)</td>
+</tr>
+</tbody>
+</table>
+<p>(*) directories count 3-fold; (**) provided disk space is available.</p>
+<p>On /scratch, users are encouraged to delete or archive old data, either to /work or to Archive Storage. /scratch is not automatically purged, however users having data older than 3 months may get reminders to clean up.</p>
+<p>Note: <strong>Only the home file system is backed up</strong></p>
+</div>
+<div class="section" id="backup-and-archiving">
+<h2>Backup and archiving<a class="headerlink" href="#backup-and-archiving" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>/home is backed up nightly</li>
+<li>Other filesystems are not backed up</li>
+<li>Restoration of files currently requires asking the Administrator, but in future will be possible independently</li>
+<li>Files will be available for restore from the backup up to 90 days after their deletion.</li>
+<li>Directories (<strong>nobackup, NOBACKUP, NoBackup, scratch, SCRATCH, .cache</strong>) and files (<strong>*.swp</strong> and <strong>core.[0-9][0-9]*</strong>) are excluded from backup</li>
+<li><code class="docutils literal notranslate"><span class="pre">/scratch</span></code> and <code class="docutils literal notranslate"><span class="pre">/work</span></code> should be considered volatile systems; data is not backed up, and is at risk of filesystem crashes. The AEI has access to a tape archiving system. This should be used for preserving and long-term archiving of data according to the AEI policy on <a class="reference external" href="https://intranet.aei.mpg.de/general-information/it-department/basic-services/long-term-archiving-langzeitarchivierung">storage of scientific data</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="jupyter_minerva.html" class="btn btn-neutral float-right" title="Running Jupyter on Minerva" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="first_step_minerva.html" class="btn btn-neutral float-left" title="First steps on Minerva" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Luca Prudenzi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

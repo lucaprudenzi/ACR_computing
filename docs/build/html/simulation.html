@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html4" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Archiving Simulation Data &mdash; ACR computer facilities 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Useful tips for using Minerva" href="tips_minerva.html" />
+    <link rel="prev" title="Running Jupyter on Minerva" href="jupyter_minerva.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ACR computer facilities
+          
+
+          
+            
+            <img src="_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Minerva</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="system_description_minerva.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="account_minerva.html">How to obtain an account</a></li>
+<li class="toctree-l1"><a class="reference internal" href="first_step_minerva.html">First steps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#logging-in">Logging in</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#slurm-basics">Slurm Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="first_step_minerva.html#interactive-sessions">Interactive sessions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basic_info_minerva.html">Basic information</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#queues">Queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_info_minerva.html#backup-and-archiving">Backup and archiving</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter_minerva.html">Jupyter on Minerva</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#install-a-python-virtual-environment-once">Install a python virtual environment (once)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="jupyter_minerva.html#prepare-ssh-on-your-laptop-desktop-once">Prepare ssh on your laptop/desktop (once)</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Archive simulation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-screen">Using Screen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compressing-the-data">Compressing the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#archiving-the-data">Archiving the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#listing-archived-files">Listing archived files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#deleting-files-from-the-archive">Deleting files from the archive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-information">Additional information</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips_minerva.html">Useful tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#quota">Quota</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#others">Others</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips_minerva.html#installing-lalsimulation">Installing LALSimulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="policies_minerva.html">Policies</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#definitions">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#overall-decision-making">Overall decision making</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#access">Access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#communication-with-users">Communication with users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#maintenance">Maintenance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#job-queues">Job queues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#disk-quotas">Disk quotas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="policies_minerva.html#backup-restore-archiving">Backup/Restore/Archiving</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Hypatia</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="system_description_hyp.html">System description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bilby_farm.html">The Bilby Farm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ethimology.html">Hypa--who??</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ACR computer facilities</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Archiving Simulation Data</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/simulation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="archiving-simulation-data">
+<h1>Archiving Simulation Data<a class="headerlink" href="#archiving-simulation-data" title="Permalink to this headline">¶</a></h1>
+<p>The /scratch and /work filesystems on Minerva are volatile; i.e. they are not backed up, and users should not trust that data stored there will be available for long periods of time. For example, problems with the filesystem could lead to data loss. Hence, users should archive their important data to ensure it is available in the future.</p>
+<p>The Max Planck Society requires that primary data used for publications is securely stored for a period of at least 10 years. See <a class="reference external" href="https://intranet.aei.mpg.de/general-information/it-department/basic-services/long-term-archiving-langzeitarchivierung">Long term archiving</a>.</p>
+<p>The Minerva Archive Service makes use of the IBM Tivoli Storage Manager using the dsmc client. Data is transferred to permanent tape storage at Rechenzentrum Garching and FHI Berlin. The institute pays per MB of data stored, and the data is compressed automatically when it is stored on tape. Here we give step-by-step instructions and best-practices for archiving simulation data. All commands should be performed on one of the head nodes, minerva01 or minerva02.</p>
+<div class="section" id="using-screen">
+<h2>Using Screen<a class="headerlink" href="#using-screen" title="Permalink to this headline">¶</a></h2>
+<p>Since it can take a very long time to archive large amounts of simulation data, and you might want to disconnect your laptop from the network while this is happening, it is recommended to use the Screen program.</p>
+<p>Screen allows you to have a permanent session which is not closed if you disconnect from the server. You can use it to run processes which take a long time without worrying about staying logged in to the machine all the time. Enter Screen by typing “screen”. Within Screen you can use normal shell commands. You can give Screen commands by typing CTRL-a followed by a single character (to get the usual CTRL-a behaviour for beginning-of-line, type CTRL-a a). The most important command is CTRL-a d to detach from the Screen session (don’t hold down CTRL while pressing the “d”). After detaching, you can log out of the machine and log back in again and resume the session using “screen -r”.</p>
+</div>
+<div class="section" id="compressing-the-data">
+<h2>Compressing the data<a class="headerlink" href="#compressing-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Go to the directory containing the data you want to archive, for example</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/scratch/&lt;username&gt;/simulations/mysim
+</pre></div>
+</div>
+<p>Since transferring data to the archive server take time, it makes sense to compress the data before transferring it. It is also recommended to archive a small number of large files rather than many small files, so we use tar to make a compressed tar archive. In tests, it was significantly faster to first make a gzipped tar file and then archive it than to directly archive the simulation. It also uses less bandwidth. Decide which files you want to exclude from the archive; you can exclude them when creating the tar file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> simulations
+nice tar cfz mysim.tar.gz --exclude<span class="o">=</span><span class="s1">&#39;checkpoint.*.h5&#39;</span> --exclude<span class="o">=</span><span class="s1">&#39;*.file_*.h5&#39;</span> mysim
+</pre></div>
+</div>
+<p>(note that tar is very fussy about the order of the arguments - make sure you put them in the order above). You should adapt the “exclude” parts to your own needs. The “nice” command is used to give the gzip process a low priority to avoid inconveniencing interactive users of the head node.</p>
+</div>
+<div class="section" id="archiving-the-data">
+<h2>Archiving the data<a class="headerlink" href="#archiving-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Now you are ready to actually archive the data:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc archive &lt;simname&gt;.tar.gz
+</pre></div>
+</div>
+<p>The archive will proceed (we have seen transfer speeds between 20 MB/s to 40 MB/s) and indicate progress. At the end, it will print a summary. Check that it reports that it has actually transferred the file. Note that the archive system remembers the path at which the original file was stored on the cluster filesystem.</p>
+</div>
+<div class="section" id="listing-archived-files">
+<h2>Listing archived files<a class="headerlink" href="#listing-archived-files" title="Permalink to this headline">¶</a></h2>
+<p>You can display a list of the files you have archived from the current directory using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc query archive <span class="s1">&#39;*&#39;</span>
+</pre></div>
+</div>
+<p>Note that the archive system remembers the directory that the file was archived from, and by default will restore it to the same place (see later). When you do the query command, you have to either be in the right directory, or give the path to the original directory. You can also list all the files archived under a given directory, for example</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc query archive -subdir<span class="o">=</span>yes <span class="s1">&#39;/scratch/&lt;username&gt;/*&#39;</span>
+</pre></div>
+</div>
+<p>You can see files from other users (assuming they have give you permission) using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc query archive -subdir<span class="o">=</span>yes -fromowner<span class="o">=</span>&lt;username&gt; <span class="s1">&#39;/scratch/&lt;username&gt;/*&#39;</span>
+</pre></div>
+</div>
+<p>Giving access to colleagues</p>
+<p>You can enable other users to query and retrieve an archive in the current directory with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc <span class="nb">set</span> access archive &lt;sim&gt;.tar.gz DAMIANA.AEI.MPG.DE &lt;otheruser&gt;
+</pre></div>
+</div>
+<p>(TODO: update this for Minerva)</p>
+<p>Typically, you should routinely give access to your collaborators on a given project so that they can retrieve the data if they need it and you are unavailable.</p>
+<p>(TODO: can we give access to groups?)</p>
+<p>You can see the permissions you have given other users with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc query access
+</pre></div>
+</div>
+<p>You can remove an access rule with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc delete access
+</pre></div>
+</div>
+<p>(this is an interactive command - you have to type the number of the rule to delete.)
+Deleting the original data</p>
+<p>Once the data is archived, the original simulation directory and the tar.gz file can be deleted:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -rf &lt;simname&gt; &lt;simname&gt;.tar.gz
+</pre></div>
+</div>
+<p>Restoring files from the archive</p>
+<p>To restore a file, go into the directory it was archived from and use</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc retrieve &lt;simname&gt;.tar.gz
+</pre></div>
+</div>
+<p>This will restore it using the original filename. You can now decompress it using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar xfz &lt;simname&gt;.tar.gz
+</pre></div>
+</div>
+<p>Once the file is decompressed, you can delete the tar.gz file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rm -f &lt;sim&gt;.tar.gz
+</pre></div>
+</div>
+<p>You can retrieve a file archived by another user (you need to know who archived the file, and they need to have given you access rights) using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc retrieve -fromowner<span class="o">=</span>&lt;otheruser&gt;  /path/to/original/&lt;simname&gt;.tar.gz /path/to/extract/&lt;simname&gt;.tar.gz
+</pre></div>
+</div>
+</div>
+<div class="section" id="deleting-files-from-the-archive">
+<h2>Deleting files from the archive<a class="headerlink" href="#deleting-files-from-the-archive" title="Permalink to this headline">¶</a></h2>
+<p>You may very occasionally want to delete files from the archive (be very careful!). This can be done using the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dsmc delete archive <span class="s1">&#39;&lt;pathtofile&gt;&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="additional-information">
+<h2>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>It is possible to archive directories rather than files. For example you may wish to make tar files of a number of simulations and archive them all at the same time. You can do this using the -subdir=yes option to dsmc. NB: any directory listed on the dsmc command line should have a trailing “/” character added otherwise dsmc doesn’t realise that it is a directory.</li>
+<li>There is additional information about use of the dsmc client at <a class="reference external" href="http://www.lrz.de/services/compute/backup/">http://www.lrz.de/services/compute/backup/</a>, though some of this information might be specific to the LRZ.</li>
+<li>We do not know how to _incrementally_ archive a directory. For example, if you want to archive only what has changed or added since the last time you archived (for example, in an ongoing simulation), there doesn’t seem to be any way to do this. <em>TODO</em>: ask the support staff of the archive service (again) if this is possible.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tips_minerva.html" class="btn btn-neutral float-right" title="Useful tips for using Minerva" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="jupyter_minerva.html" class="btn btn-neutral float-left" title="Running Jupyter on Minerva" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Luca Prudenzi.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
